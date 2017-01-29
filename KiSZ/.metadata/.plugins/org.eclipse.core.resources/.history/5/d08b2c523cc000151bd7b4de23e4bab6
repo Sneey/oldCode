@@ -1,0 +1,66 @@
+package projekt;
+
+
+public class Main {
+
+	
+	//public static void say(String s) { System.out.println(s);}
+	
+	public static void main(String[] args) throws Exception {
+		
+		
+		Kalendarz kalendarz1 = new Kalendarz("kalendarz gregoriañski");
+		Kalendarz kalendarz2 = new Kalendarz("kalendarz lunarny");
+		
+		//PomyslnyDzien pd1 = PomyslnyDzien.dodajDzien(kalendarz1, "On this day, the Shen Tönpa Shenrap taught the clear light gods.", "This is a good day to purify broken vows and to recite one of the three heart mantras of Yungdrung Bön.  Also, because of its significance in the lunar cycle, no meat or alcohol are consumed on this day and special prayers and mantras are performed.");
+
+		//ArrayList<DanyDzien> dni = new ArrayList<DanyDzien>();
+		
+	       String[] nazwaD = {"1", "2", "3", "4", "5", "6"};
+	        String[] miesiac = {".01", ".02", ".03"};
+	        
+	        DanyDzien dd1 = DanyDzien.utworzDanyDzien(kalendarz1, nazwaD[1], miesiac[1]);
+	        DanyDzien dd2 = DanyDzien.utworzDanyDzien(kalendarz1, nazwaD[5], miesiac[1]);
+	        
+	        System.out.println(dd1);
+	        System.out.println(dd2);
+	        
+	        
+	        
+	        
+	       
+	        /*int i = 0;
+	        while (i < nazwaD.length) {
+	            dni.add(new DanyDzien(kalendarz1, nazwaD[i], miesiac[0]));
+	            i++;
+	        }*/
+	        
+	}        
+}       
+	        //System.out.println(dni);
+	        //String[] tab = (String[]) dni.toArray(new String[0]);
+			//System.out.println(DanyDzien.utworzDanyDzien(kalendarz1,[0][1]);
+	    
+		
+		//Calendar cal = Calendar.getInstance();
+		//cal.set(2003, 4, 7);
+		
+		 
+	   // say("Aktualne ustawienia kalendarza: " + (cal.get(Calendar.MONTH) + 1) + '-' + cal.get(Calendar.DATE));
+	    
+	    //DanyDzien dd1 = DanyDzien.utworzDanyDzien(kalendarz1, ;
+		
+		/* DanyDzien[][] daneDni = new DanyDzien[12][365];
+	        int x = 1;
+	        
+		 while (x < 12 ) {
+	            daneDni[x] = new DanyDzien(kalendarz1, ".01");
+	            System.out.println(x + daneDni[x].nazwaD);
+	            x++;
+	        }
+
+		 System.out.println(daneDni[3]); */
+		 
+		//tablic adwuwymiarowa 
+	
+

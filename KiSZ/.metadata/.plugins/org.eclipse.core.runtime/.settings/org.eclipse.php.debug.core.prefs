@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+org.eclipse.php.debug.core.xdebugDebuggerSettingsProvider=<settings><clientPort>9000</clientPort><ownerId>php-exe-fb72c652-f111-4d71-9cde-ad3afd6988d9</ownerId><proxyIdeKey></proxyIdeKey><proxyAddress></proxyAddress><proxyEnable>false</proxyEnable></settings>\u0005<settings><clientPort>9000</clientPort><ownerId>php-server-7f02a0eb-9430-4f00-8efa-4bfed75d2461</ownerId><proxyIdeKey></proxyIdeKey><proxyAddress></proxyAddress><proxyEnable>false</proxyEnable></settings>\u0005<settings><clientPort>9000</clientPort><ownerId>php-server-a95992b3-c92e-4ef3-995e-a3fb8407917f</ownerId><proxyIdeKey></proxyIdeKey><proxyAddress></proxyAddress><proxyEnable>false</proxyEnable></settings>
+org.eclipse.php.debug.core.zendDebuggerSettingsProvider=<settings><clientPort>10137</clientPort><ownerId>php-exe-fb72c652-f111-4d71-9cde-ad3afd6988d9</ownerId></settings>\u0005<settings><clientPort>10137</clientPort><ownerId>php-server-7f02a0eb-9430-4f00-8efa-4bfed75d2461</ownerId><clientIp>192.168.210.1,192.168.1.8,172.16.249.1,127.0.0.1</clientIp><responseTimeout>60000</responseTimeout></settings>\u0005<settings><clientPort>10137</clientPort><ownerId>php-server-a95992b3-c92e-4ef3-995e-a3fb8407917f</ownerId><clientIp>192.168.210.1,192.168.1.8,172.16.249.1,127.0.0.1</clientIp><responseTimeout>60000</responseTimeout></settings>
+org.eclipse.php.debug.coredefaultPHP=php
+org.eclipse.php.debug.coreinstalledPHPDebuggers=org.eclipse.php.debug.core.noneDebugger
+org.eclipse.php.debug.coreinstalledPHPInis=null
+org.eclipse.php.debug.coreinstalledPHPLoadIniDefaults=false
+org.eclipse.php.debug.coreinstalledPHPLocations=/usr/bin/php
+org.eclipse.php.debug.coreinstalledPHPNames=php
+org.eclipse.php.debug.coreinstalledPHPUniqueIds=php-exe-fb72c652-f111-4d71-9cde-ad3afd6988d9
+org.eclipse.php.debug.corephp_versions=null

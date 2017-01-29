@@ -1,0 +1,33 @@
+package kiszProject;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		ArrayList<Integer> lista = new ArrayList<Integer>();
+        String wielomian = new String();
+        wielomian = "1011";
+        String ciagPoczatkowy = "1000";
+        
+        //Wrzucenie do ArrayListy znaków ciąguPoczątkowego
+        for(int i=0;i<ciagPoczatkowy.length();i++){
+        	lista.add(Character.getNumericValue((ciagPoczatkowy.charAt(i))));
+        }
+        
+        // sj+3 = sj + sj+1 (str22-Mochnacki)
+        for(int i=0;i<30;i++){
+        	if((lista.get(i)+lista.get(i+1))==1)
+        	lista.add(1);
+        	else
+        	lista.add(0);
+        }
+        
+        System.out.println(wielomian.charAt(2));
+        System.out.println(lista);
+        
+
+	}
+
+}

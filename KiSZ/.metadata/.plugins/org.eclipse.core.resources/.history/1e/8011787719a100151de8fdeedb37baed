@@ -1,0 +1,27 @@
+package kiszProject;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		ArrayList<Integer> lista = new ArrayList<Integer>();
+        String wielomian = new String();
+        wielomian = "1011";
+        String ciagPoczatkowy = "100";
+        
+        for(int i=0;i<ciagPoczatkowy.length();i++){
+        	lista.add(ciagPoczatkowy.indexOf(i).parseInt);
+        }
+        for(int i=0;i<10;i++){
+        	//lista.add();
+        }
+        
+        System.out.println(wielomian.charAt(2));
+        System.out.println(lista);
+        
+
+	}
+
+}

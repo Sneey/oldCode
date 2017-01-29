@@ -1,0 +1,40 @@
+package projekt;
+
+import java.util.ArrayList;
+
+public class Wydarzenie {
+
+		public String nazwa; 
+		public String opis;
+		public String harmonogram;
+		public ArrayList<RokWyd> rokWyd; //impl.asocjacji * z RokWyd
+		public ArrayList<Adres> adres; //imp.asocjacji 1..* z Adres 
+	    
+		public Wydarzenie(String nazwa, String opis, String harmonogram){
+			this.nazwa = nazwa;
+			this.opis = opis;
+			this.harmonogram = harmonogram;
+			this.rokWyd = new ArrayList<RokWyd>();
+			this.adres = new ArrayList<Adres>();
+		
+		}
+		
+		//sprawdzenie czy mamy juz info o tym adresie
+		public void dodajAdres(Adres dodajAdres){
+			if(!adres.contains(dodajAdres)){
+				adres.add(dodajAdres);
+				//Dodaj info zwrotn�
+				
+				dodajAdres.dodajWydarzenie(this);
+			}
+		}
+		
+		public String toString(){
+			String info = "Wydarzenie: " + nazwa + "\n";
+			//Dodaj info o adresie danego wydarzenia
+			for (Adres a : adres){
+				info += "Adres:" + a.ulica + " " + a.nrDomu + "\n" + " Pa�stwo: " + a.panstwo + "\n";
+			}
+			return info;
+		}
+}

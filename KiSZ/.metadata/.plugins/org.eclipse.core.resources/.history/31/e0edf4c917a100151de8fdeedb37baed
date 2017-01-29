@@ -1,0 +1,18 @@
+package kiszProject;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+        String wielomian = new String();
+        wielomian = "1011";
+        String ciagPoczoatkowy = "100";
+        
+        
+        System.out.println(wielomian.charAt(4));
+        System.out.println();
+        
+
+	}
+
+}

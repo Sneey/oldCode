@@ -1,0 +1,71 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Main {
+
+	public static void main(String[] args) throws FileNotFoundException {				
+		ArrayList <Integer> g_x = new ArrayList<Integer>();
+        ArrayList <Integer> m_x = new ArrayList<Integer>();
+        ArrayList <Integer> m_xX = new ArrayList<Integer>(); // m(x) * x^(n-k)
+        ArrayList <Integer> r_x = new ArrayList<Integer>();
+        ArrayList <Integer> c_x = new ArrayList<Integer>();
+        ArrayList <Integer> c_x_e = new ArrayList<Integer>();
+        ArrayList <Integer> y_x = new ArrayList<Integer>();
+
+		HashMap<Integer, ArrayList<Integer>> minimalPolynomials = new HashMap<Integer,ArrayList<Integer>>();
+		HashMap<Integer, ArrayList<Integer>> minimalPolynomials_nww = new HashMap<Integer,ArrayList<Integer>>();
+		
+		int t = 12;
+		int degreeOfPolynomial = 0;
+		int n = 63;
+		int m = 6;
+		int k = Math.abs(t*m-n);
+		if(t>8) k = Math.abs(t*m-n)+4;
+		
+		Operations operation = new Operations();
+		minimalPolynomials = operation.getMinimalsPolynomial(m);
+		degreeOfPolynomial = (minimalPolynomials.get(0).size() - 1); //stopień wielomianów minimalnych
+		minimalPolynomials_nww = operation.nww(t, minimalPolynomials);
+		System.out.println("MinimalPOLYNOMIALNWW" + minimalPolynomials_nww);
+		g_x = operation.multiplication(minimalPolynomials_nww, degreeOfPolynomial);
+		System.out.println("g_x: "+ g_x);
+/*		//PARAMETRY: 
+		System.out.println("t = " + t);
+		System.out.println("n: " + n + ", k: " + k);
+		//MAXYMALNA ILOŚĆ LITER = k/8
+		m_x = operation.get_m_x("hellohellohellohello", degreeOfPolynomial, k);
+		m_xX = operation.get_m_xX(m_x, g_x);
+		r_x = operation.division(m_xX, g_x);
+		c_x = operation.get_c_x(m_x, r_x, n);
+		
+		PrintWriter zapis = new PrintWriter("wynik_bledy_2.txt");
+		int zmienna=0;
+		//for(int j=0;j<255;j++){
+			ArrayList<Integer> wyniki = new ArrayList<Integer>();
+			long start=System.currentTimeMillis();
+			for(int i=0;i<100;i++){
+				c_x_e = operation.enterErrors(10, c_x, zapis, zmienna);
+				
+				//System.out.println("c_x: "+ c_x);
+				//System.out.println("c_e: "+ c_x_e);
+				y_x = operation.repair(c_x_e, g_x, t);
+				operation.testing(c_x, c_x_e, y_x, zapis, wyniki);
+			}
+			float ilosc_OK=0, ilosc_ZLE=0;
+			zmienna++;
+			for(int i=0;i<wyniki.size();i++){
+				if(wyniki.get(i)==1) ilosc_OK++;
+				else ilosc_ZLE++;
+			}
+			float procent_OK= 0;
+			procent_OK = ilosc_OK/(ilosc_OK+ilosc_ZLE);
+			long stop=System.currentTimeMillis();
+			zapis.println(c_x.size()-zmienna + "\t" + procent_OK + "\t" + (stop-start) );
+			System.out.println(c_x.size()-zmienna + "\t" + procent_OK + "\t" + (stop-start));
+		//}
+		zapis.close();
+		System.out.println("Skończyłem");
+*/	}
+}

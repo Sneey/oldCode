@@ -1,0 +1,26 @@
+package projekt;
+
+
+public class Main {
+
+	
+	//public static void say(String s) { System.out.println(s);}
+	
+	public static void main(String[] args) throws Exception {
+		
+		
+		Kalendarz kalendarz1 = new Kalendarz("kalendarz gregoria�ski");
+		Kalendarz kalendarz2 = new Kalendarz("kalendarz lunarny");
+		
+	    String[] nazwaD = {"1", "2", "3", "4", "5", "6"};
+	    String[] miesiac = {".01", ".02", ".03"};
+	        
+	    DanyDzien dd1 = DanyDzien.utworzDanyDzien(kalendarz1, nazwaD[1], miesiac[1]);
+	    DanyDzien dd2 = DanyDzien.utworzDanyDzien(kalendarz1, nazwaD[5], miesiac[1]);
+	        
+	    System.out.println(dd1);
+	    System.out.println(dd2);
+	        
+	}        
+}       
+
